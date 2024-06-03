@@ -5,8 +5,16 @@ text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
 def encrypt(text, shift):
+    cipher_text = ""
     for letter in text:
-        print(letter)
+        position = alphabet.index(letter)   #index() method
+        #print(letter, position)
+        new_position = position + shift
+        new_letter =  alphabet[new_position]
+        cipher_text += new_letter
+
+      
+    print(f"The encoded text is {cipher_text}") 
 
 encrypt(text, shift)
 #TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
