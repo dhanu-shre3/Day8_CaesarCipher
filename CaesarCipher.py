@@ -18,7 +18,7 @@ def encrypt(text, shift):
       
     print(f"The encoded text is {cipher_text}") 
 
-encrypt(text, shift)
+#encrypt(text, shift)
 
 def decrypt(text, shift):
     decipher_text = ""
@@ -33,9 +33,16 @@ def decrypt(text, shift):
       
     print(f"The decoded text is {decipher_text}") 
 
-encrypt(text, shift)
 
-decrypt(text, shift)
+
+
+
+if direction == "encode":
+    encrypt(text, shift)
+elif direction == "decode":
+    decrypt(text, shift)
+
+
 #TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
 
     #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.  
